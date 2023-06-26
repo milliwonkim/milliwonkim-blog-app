@@ -2,24 +2,10 @@
   "name": "milliwonkim-blog",
   "version": "2.0.0",
   "license": "MIT",
-  "homepage": "https://milliwonkim.github.io/milliwonkim-blog",
-  "engines": {
-    "node": ">=16"
-  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "deploy": "rm -rf out && touch out/.nojekyll && git add -f out/ && git commit -m 'deploy to gh-pages' && git subtree push --prefix out origin gh-pages",
-    "deps": "run-s deps:*",
-    "deps:update": "[ -z $GITHUB_ACTIONS ] && yarn add notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:update on CI'",
-    "deps:link": "[ -z $GITHUB_ACTIONS ] && yarn link notion-client notion-types notion-utils react-notion-x || echo 'Skipping deps:link on CI'",
-    "analyze": "cross-env ANALYZE=true next build",
-    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
-    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
-    "test": "run-p test:*",
-    "test:lint": "eslint '**/*.{ts,tsx}'",
-    "test:prettier": "prettier '**/*.{js,jsx,ts,tsx}' --check"
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
