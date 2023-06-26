@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
               sizes='32x32'
               href='favicon.png'
             />
+
             <script
               async
               src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8054978526190901'
