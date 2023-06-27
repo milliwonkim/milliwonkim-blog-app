@@ -10,11 +10,11 @@ export default siteConfig({
 
   // basic site info (required)
   name: "Milliwonkim's All About Informations",
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
+  domain: 'milliwonkim-blog.vercel.app',
   author: 'Milliwonkim',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: 'Milliwonkim의 지식창고',
 
   // social usernames (optional)
   github: 'milliwonkim',
