@@ -87,6 +87,7 @@
 .notion-collection-card {
   border-radius: 16px;
   box-shadow: none;
+  border: none !important;
 }
 
 .notion-collection-card-cover img {
@@ -198,7 +199,7 @@
 
 .notion-collection-row-property .notion-property {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .notion-collection-row-value {
@@ -212,11 +213,8 @@
 .notion-page-cover-wrapper span,
 .notion-page-cover-wrapper img {
   max-width: 1200px !important;
-  border-radius: 24px;
-}
-
-.notion-page-cover-wrapper {
-  box-shadow: 2px 2px 8px 4px rgba(15, 15, 15, 0.1);
+  border: none;
+  object-fit: contain;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -407,4 +405,24 @@
 
 .notion-block-260baa77f1e1428b97fb14ac99c7c385 {
   display: none;
+}
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Pretendard-Regular' !important;
+}
+
+.notion-page-content-inner {
+  gap: 8px !important;
+}
+
+.notion-page-title-text {
+  border-bottom: none;
 }

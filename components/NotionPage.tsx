@@ -219,8 +219,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
-  console.log('site', config.defaultPageCover)
-
   return (
     <>
       <PageHead
