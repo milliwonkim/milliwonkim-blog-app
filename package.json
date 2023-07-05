@@ -2,6 +2,7 @@
   "name": "milliwonkim-blog",
   "version": "2.0.0",
   "license": "MIT",
+  "homepage": "https://milliwonkim.github.io/milliwonkim-blog-app",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
