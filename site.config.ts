@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: "Milliwonkim's All About Informations",
-  domain: 'https://milliwonkim-blog.vercel.app/',
+  domain: 'https://milliwonkim.github.io/milliwonkim-blog-app',
   author: 'Milliwonkim',
 
   // open graph metadata (optional)
