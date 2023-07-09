@@ -6,32 +6,26 @@ import { FaLinkedin } from '@react-icons/all-files/fa/FaLinkedin'
 import { FaMastodon } from '@react-icons/all-files/fa/FaMastodon'
 import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter'
 import { FaYoutube } from '@react-icons/all-files/fa/FaYoutube'
-import { FaZhihu } from '@react-icons/all-files/fa/FaZhihu'
-import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
-import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 
 import * as config from '@/lib/config'
-import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
 
-// TODO: merge the data and icons from PageSocial with the social links in Footer
-
 export const FooterImpl: React.FC = () => {
-  const [hasMounted, setHasMounted] = React.useState(false)
-  const { isDarkMode, toggleDarkMode } = useDarkMode()
+  // const [hasMounted, setHasMounted] = React.useState(false)
+  // const { isDarkMode, toggleDarkMode } = useDarkMode()
 
-  const onToggleDarkMode = React.useCallback(
-    (e) => {
-      e.preventDefault()
-      toggleDarkMode()
-    },
-    [toggleDarkMode]
-  )
+  // const onToggleDarkMode = React.useCallback(
+  //   (e) => {
+  //     e.preventDefault()
+  //     toggleDarkMode()
+  //   },
+  //   [toggleDarkMode]
+  // )
 
-  React.useEffect(() => {
-    setHasMounted(true)
-  }, [])
+  // React.useEffect(() => {
+  //   setHasMounted(true)
+  // }, [])
 
   const date = new Date()
 
@@ -41,7 +35,7 @@ export const FooterImpl: React.FC = () => {
         Copyright {date.getFullYear()} {config.author}
       </div>
 
-      <div className={styles.settings}>
+      {/* <div className={styles.settings}>
         {hasMounted && (
           <a
             className={styles.toggleDarkMode}
@@ -53,7 +47,7 @@ export const FooterImpl: React.FC = () => {
             {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
           </a>
         )}
-      </div>
+      </div> */}
 
       <div className={styles.social}>
         {config.twitter && (
@@ -76,18 +70,6 @@ export const FooterImpl: React.FC = () => {
             rel='me'
           >
             <FaMastodon />
-          </a>
-        )}
-
-        {config.zhihu && (
-          <a
-            className={styles.zhihu}
-            href={`https://zhihu.com/people/${config.zhihu}`}
-            title={`Zhihu @${config.zhihu}`}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <FaZhihu />
           </a>
         )}
 
